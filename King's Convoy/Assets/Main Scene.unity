@@ -10527,6 +10527,7 @@ MonoBehaviour:
   scrollSpeed: 5
   minY: 10
   maxY: 80
+  gameOverUI: {fileID: 955130981}
 --- !u!4 &963642055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4544421649345326224, guid: b1845bb4d572f8c4588d495ae5eae70c, type: 3}
