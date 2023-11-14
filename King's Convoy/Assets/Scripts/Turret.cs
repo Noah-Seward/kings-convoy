@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Net.Mime;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Turret : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Turret : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public GameObject rangeIndicator;
 
     // Start is called before the first frame update
     void Start()
@@ -87,6 +89,17 @@ public class Turret : MonoBehaviour
         {
             bullet.Seek(target);
         }
+    }
+
+    private void OnMouseEnter()
+    {
+        rangeIndicator.SetActive(true);
+        Debug.Log("hovering");
+    }
+    private void OnMouseExit()
+    {
+        rangeIndicator.SetActive(false);
+        Debug.Log("leaving");
     }
 
     private void OnDrawGizmosSelected()
