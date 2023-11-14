@@ -18,6 +18,9 @@ public class BuildManager : MonoBehaviour
     public GameObject standardTurretPrefab;
     public GameObject machineTurretPrefab;
 
+    public GameObject machineRange;
+    public GameObject cannonRange;
+
     public GameObject buildEffect;
 
     private TurretBlueprint turretToBuild;
@@ -27,6 +30,27 @@ public class BuildManager : MonoBehaviour
         if (Input.GetMouseButtonDown(1) || Input.GetKey("r"))
         {
             turretToBuild = null;
+            machineRange.SetActive(false);
+            cannonRange.SetActive(false);
+        }
+
+        FollowMouse();
+    }
+
+    private void FollowMouse()
+    {
+        if(turretToBuild != null)
+        {
+            Debug.Log("Setting mouse position.");
+            Vector3 mousePos;
+            // Translates the mouse on screen to world position
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            // Reset the z value to 0.5
+            mousePos = new Vector3(mousePos.x, mousePos.y, 0.5f);
+
+            machineRange.transform.position = mousePos;
+            cannonRange.transform.position = mousePos;
         }
     }
 
@@ -68,5 +92,6 @@ public class BuildManager : MonoBehaviour
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
+        machineRange.SetActive(true);
     }
 }
