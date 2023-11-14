@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BuildManager : MonoBehaviour
@@ -20,6 +21,14 @@ public class BuildManager : MonoBehaviour
     public GameObject buildEffect;
 
     private TurretBlueprint turretToBuild;
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(1) || Input.GetKey("r"))
+        {
+            turretToBuild = null;
+        }
+    }
 
     public bool HasMoney
     {

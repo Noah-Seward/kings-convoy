@@ -11,6 +11,10 @@ public class CameraController : MonoBehaviour
     public float minY = 10f;
     public float maxY = 80f;
 
+    public static bool GameIsOver;
+
+    public GameObject gameOverUI;
+
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +26,7 @@ public class CameraController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             doMovement = !doMovement;
+            gameOverUI.SetActive(true);
         }
         if (!doMovement)
         {
