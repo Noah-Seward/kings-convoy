@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Net.Mime;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Turret : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Turret : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public GameObject rangeIndicator;
 
     // Start is called before the first frame update
     void Start()
@@ -89,7 +91,15 @@ public class Turret : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnMouseEnter()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+    }
+
+        private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
