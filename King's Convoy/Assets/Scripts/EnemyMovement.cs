@@ -20,18 +20,20 @@ public class EnemyMovement : MonoBehaviour
 
     private Transform target;
     private int wavepointIndex = 0;
+    public bool isWalking;
 
     private void Start()
     {
         speed = startSpeed;
         health = startHealth;
         target = Waypoints.points[0];
+
     }
 
     public void TakeDamage(int amount)
     {
         health -= amount;
-
+        gameObject.GetComponent<Animator>().SetBool("isHit", true);
         healthBar.fillAmount = health / startHealth;
 
         if (health <= 0)
@@ -43,10 +45,9 @@ public class EnemyMovement : MonoBehaviour
     void Die()
     {
         PlayerStats.Money += value;
-
+        gameObject.GetComponent<Animator>().SetBool("isDead", true);
         GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 5f);
-
         Destroy(gameObject);
     }
 
@@ -58,6 +59,11 @@ public class EnemyMovement : MonoBehaviour
         if (Vector3.Distance(transform.position, target.position) <= 0.4f)
         {
             GetNextWaypoint();
+        }
+        if (dir != Vector3.zero)
+        {
+            transform.forward = dir;
+            isWalking = true;
         }
     }
 
@@ -71,6 +77,7 @@ public class EnemyMovement : MonoBehaviour
 
         wavepointIndex++;
         target = Waypoints.points[wavepointIndex];
+        
     }
 
     void EndPath()
