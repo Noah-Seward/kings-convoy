@@ -36,7 +36,7 @@ Transform:
   - {fileID: 4417962974078372229}
   - {fileID: 2162838199192061512}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6859325889350327144
 MeshFilter:
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b739024f85cff448e47f021f9d2fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
+  range: 15
   fireRate: 2
   enemyTag: Enemy
   partToRotate: {fileID: 4417962974078372229}
@@ -329,6 +329,14 @@ PrefabInstance:
     - target: {fileID: 6502797735371236763, guid: f8061774ee9855b4ab63eb72ba391c70, type: 3}
       propertyPath: m_RootOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502797735371236763, guid: f8061774ee9855b4ab63eb72ba391c70, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502797735371236763, guid: f8061774ee9855b4ab63eb72ba391c70, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6502797735371236763, guid: f8061774ee9855b4ab63eb72ba391c70, type: 3}
       propertyPath: m_LocalPosition.x
