@@ -1,5 +1,4 @@
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class BuildManager : MonoBehaviour
@@ -19,9 +18,6 @@ public class BuildManager : MonoBehaviour
     public GameObject standardTurretPrefab;
     public GameObject machineTurretPrefab;
 
-    public GameObject machineRange;
-    public GameObject cannonRange;
-
     public GameObject buildEffect;
 
     private TurretBlueprint turretToBuild;
@@ -34,18 +30,6 @@ public class BuildManager : MonoBehaviour
         }
 
         // FollowMouse();
-    }
-
-    private void FollowMouse()
-    {
-        if(turretToBuild != null)
-        {
-            Vector3 mousePos;
-            // Translates the mouse on screen to world position
-            mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0.7f, Input.mousePosition.z));
-            machineRange.transform.position = mousePos;
-            cannonRange.transform.position = mousePos;
-        }
     }
 
     public bool HasMoney
