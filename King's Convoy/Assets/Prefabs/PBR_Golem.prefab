@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 6987255976085815822}
   m_Layer: 0
   m_Name: PBR_Golem
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -751,10 +751,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 10
   speed: 0
-  startHealth: 100
+  startHealth: 200
   value: 20
   deathEffect: {fileID: 9110974464571016482, guid: fdb506a71ed8d1945b627f54903e0b69, type: 3}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4892278337372014469}
 --- !u!1 &8357156761739482993
 GameObject:
   m_ObjectHideFlags: 0
