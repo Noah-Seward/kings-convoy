@@ -94,12 +94,10 @@ public class Turret : MonoBehaviour
     private void OnMouseEnter()
     {
         rangeIndicator.SetActive(true);
-        Debug.Log("hovering");
     }
     private void OnMouseExit()
     {
         rangeIndicator.SetActive(false);
-        Debug.Log("leaving");
     }
 
     private void OnDrawGizmosSelected()

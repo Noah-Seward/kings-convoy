@@ -1,4 +1,5 @@
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class BuildManager : MonoBehaviour
@@ -30,8 +31,6 @@ public class BuildManager : MonoBehaviour
         if (Input.GetMouseButtonDown(1) || Input.GetKey("r"))
         {
             turretToBuild = null;
-            machineRange.SetActive(false);
-            cannonRange.SetActive(false);
         }
 
         FollowMouse();
@@ -41,14 +40,9 @@ public class BuildManager : MonoBehaviour
     {
         if(turretToBuild != null)
         {
-            Debug.Log("Setting mouse position.");
             Vector3 mousePos;
             // Translates the mouse on screen to world position
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            // Reset the z value to 0.5
-            mousePos = new Vector3(mousePos.x, mousePos.y, 0.5f);
-
+            mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0.7f, Input.mousePosition.z));
             machineRange.transform.position = mousePos;
             cannonRange.transform.position = mousePos;
         }
@@ -92,6 +86,6 @@ public class BuildManager : MonoBehaviour
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
-        machineRange.SetActive(true);
+        machineRange = Instantiate(machineRange, Input.mousePosition, Quaternion.identity);
     }
 }
