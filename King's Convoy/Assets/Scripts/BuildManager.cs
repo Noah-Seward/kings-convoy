@@ -33,7 +33,7 @@ public class BuildManager : MonoBehaviour
             turretToBuild = null;
         }
 
-        // FollowMouse();
+        FollowMouse();
     }
 
     private void FollowMouse()
@@ -86,5 +86,6 @@ public class BuildManager : MonoBehaviour
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
+        machineRange = Instantiate(machineRange, Input.mousePosition, Quaternion.identity);
     }
 }

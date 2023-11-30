@@ -13,6 +13,6 @@ public class GameOver : MonoBehaviour
 
     public void Menu ()
     {
-        Application.Quit();
+        Debug.Log("Go to menu.");
     }
 }
