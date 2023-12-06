@@ -40,7 +40,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483192232590567043}
-  m_Mesh: {fileID: -1171068084507867203, guid: 6a2804b640b654648b47afca42dc2866, type: 3}
+  m_Mesh: {fileID: -4486940636685659976, guid: 6a2804b640b654648b47afca42dc2866, type: 3}
 --- !u!23 &4170766152499313530
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 1983313448420814934}
   - component: {fileID: 3106690419644542616}
   m_Layer: 0
-  m_Name: StandardTurret
+  m_Name: StandardTurret_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,7 +184,7 @@ Transform:
   - {fileID: 721071684380181350}
   - {fileID: 5787220228812809476}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.174, y: 0.436, z: 0.333}
 --- !u!33 &7147255308616978249
 MeshFilter:
@@ -193,7 +193,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5397158884592171723}
-  m_Mesh: {fileID: -4896778225051713310, guid: 6a2804b640b654648b47afca42dc2866, type: 3}
+  m_Mesh: {fileID: 7478752386755446459, guid: 6a2804b640b654648b47afca42dc2866, type: 3}
 --- !u!23 &8061772475773698345
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 20
-  fireRate: 0.25
+  fireRate: 1
   enemyTag: Enemy
   partToRotate: {fileID: 721071684380181350}
   turnSpeed: 10
