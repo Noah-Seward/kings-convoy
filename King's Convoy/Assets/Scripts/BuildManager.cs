@@ -109,9 +109,8 @@ public class BuildManager : MonoBehaviour
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
-        selectedNode = null;
-        // machineRange = Instantiate(machineRange, Input.mousePosition, Quaternion.identity);
 
-        nodeUI.Hide();
+        DeselectNode();
+        // machineRange = Instantiate(machineRange, Input.mousePosition, Quaternion.identity);
     }
 }
