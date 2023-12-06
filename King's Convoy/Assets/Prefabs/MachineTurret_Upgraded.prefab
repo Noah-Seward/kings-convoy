@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4944611245186742516}
   - component: {fileID: 1874226895509886892}
   m_Layer: 0
-  m_Name: MachineTurret
+  m_Name: MachineTurret_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +36,7 @@ Transform:
   - {fileID: 4417962974078372229}
   - {fileID: 2162838199192061512}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6859325889350327144
 MeshFilter:
@@ -45,7 +45,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3111550073531274424}
-  m_Mesh: {fileID: -4412358999452019196, guid: 6a2804b640b654648b47afca42dc2866, type: 3}
+  m_Mesh: {fileID: -4101963157073364471, guid: 6a2804b640b654648b47afca42dc2866, type: 3}
 --- !u!23 &2366816820526705309
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -154,12 +154,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b739024f85cff448e47f021f9d2fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
-  fireRate: 2
+  range: 20
+  fireRate: 3
   enemyTag: Enemy
   partToRotate: {fileID: 4417962974078372229}
   turnSpeed: 10
-  bulletPrefab: {fileID: 5645971338594631917, guid: 2148b36b302732d49bc870b5f3acaf20, type: 3}
+  bulletPrefab: {fileID: 5645971338594631917, guid: 391cf40cd5195a14a81dc9d7e23846af, type: 3}
   firePoint: {fileID: 4412707002064855708}
   rangeIndicator: {fileID: 6461268155992452080}
 --- !u!1 &3860957083243717151
@@ -202,7 +202,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3860957083243717151}
-  m_Mesh: {fileID: 6992665034524635283, guid: 6a2804b640b654648b47afca42dc2866, type: 3}
+  m_Mesh: {fileID: -4933654763254444373, guid: 6a2804b640b654648b47afca42dc2866, type: 3}
 --- !u!23 &2442157752467924954
 MeshRenderer:
   m_ObjectHideFlags: 0

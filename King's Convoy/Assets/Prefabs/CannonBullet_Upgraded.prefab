@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8981750926917373709}
   - component: {fileID: 4445912312982888428}
   m_Layer: 0
-  m_Name: CannonBullet
+  m_Name: CannonBullet_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4011828212033203297
 MeshFilter:
@@ -97,5 +97,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 70
-  damage: 75
+  damage: 100
   impactEffect: {fileID: 5386214058045132360, guid: c7d9e7e689fc2f340a30f9c8b311abef, type: 3}

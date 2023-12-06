@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8981750926917373709}
   - component: {fileID: 4445912312982888428}
   m_Layer: 0
-  m_Name: CannonBullet
+  m_Name: MachineBullet_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,12 +27,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5645971338594631917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 39.58671, y: 0.625, z: 0.77199936}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4011828212033203297
 MeshFilter:
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dd4b274adaac4f7429148a0d3feca6ea, type: 2}
+  - {fileID: 2100000, guid: de0e5f16238f507418c4543c944633ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,6 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3591cbd5ffdcc9f478f66be5f0a975ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 70
-  damage: 75
-  impactEffect: {fileID: 5386214058045132360, guid: c7d9e7e689fc2f340a30f9c8b311abef, type: 3}
+  speed: 80
+  damage: 30
+  impactEffect: {fileID: 5386214058045132360, guid: 65cfdfc08cbfcaa408ab3981a8a8ef5d, type: 3}
