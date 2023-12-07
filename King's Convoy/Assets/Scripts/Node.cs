@@ -100,6 +100,16 @@ public class Node : MonoBehaviour
 
         Debug.Log("Turret upgraded!");
     }
+    
+    public void SellTurret ()
+    {
+        PlayerStats.Money += turretBlueprint.GetSellAmount();
+
+        // Cool effect here
+
+        Destroy(turret);
+        turretBlueprint = null;
+    }
 
     private void OnMouseEnter()
     {
