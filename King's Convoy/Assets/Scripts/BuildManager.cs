@@ -32,7 +32,7 @@ public class BuildManager : MonoBehaviour
             turretToBuild = null;
         }
 
-        FollowMouse();
+        //FollowMouse();
     }
 
     public bool HasMoney
