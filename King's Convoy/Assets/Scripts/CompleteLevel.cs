@@ -6,8 +6,18 @@ using UnityEngine.UI;
 
 public class CompleteLevel : MonoBehaviour
 {
-    public void Retry()
+    public string menuSceneName = "Menu Scene";
+
+    public string nextLevel = "Level02";
+    public int levelToUnlock = 2;
+
+    public void Menu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(menuSceneName);
+    }
+
+    public void Continue()
+    {
+        SceneManager.LoadScene(nextLevel);
     }
 }

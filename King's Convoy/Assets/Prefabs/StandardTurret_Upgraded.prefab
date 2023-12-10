@@ -301,11 +301,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 20
-  fireRate: 1
+  fireRate: 0.5
   enemyTag: Enemy
   partToRotate: {fileID: 721071684380181350}
   turnSpeed: 10
-  bulletPrefab: {fileID: 5645971338594631917, guid: a7ba606c366e44449a69ef59ca92ac68, type: 3}
+  bulletPrefab: {fileID: 5645971338594631917, guid: d2a108e846660a746a0039c24fce9543, type: 3}
   firePoint: {fileID: 4597552209930331928}
   rangeIndicator: {fileID: 68074731615941233}
 --- !u!1001 &4316064759276428110

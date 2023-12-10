@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
             EndGame();
         }
 
-        if (PlayerStats.Rounds >= 15)
+        if (PlayerStats.Rounds >= 12)
         {
             WinLevel();
         }
