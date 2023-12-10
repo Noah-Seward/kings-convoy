@@ -91,11 +91,11 @@ public class Turret : MonoBehaviour
         }
     }
 
-    private void OnMouseEnter()
+    public void Activate()
     {
         rangeIndicator.SetActive(true);
     }
-    private void OnMouseExit()
+    public void Deactivate()
     {
         rangeIndicator.SetActive(false);
     }
